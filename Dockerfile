@@ -14,6 +14,8 @@ RUN mkdir /home/challenge/ && echo "CTF{$(date +%s | sha256sum | base64)}" > /ho
 
 RUN lighttpd -t -f /etc/lighttpd/lighttpd.conf
 
+VOLUME [ "/tmp", "/var/tmp" ]
+
 USER nobody
 WORKDIR src
 
