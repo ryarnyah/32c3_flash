@@ -6,6 +6,7 @@ RUN apt-get update && \
     mkdir /src && cd /src && \
     wget https://github.com/ctfs/write-ups-2015/raw/master/32c3-ctf-2015/reversing/flash-300/flash.tgz && \
     tar xzf flash.tgz && \
+    cp flash.tgz www/ && \
     mkdir -p /etc/lighttpd/ && \
     mv lighttpd.conf /etc/lighttpd/ && \
     mv bin/md5calc /usr/local/bin/ 
