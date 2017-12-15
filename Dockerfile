@@ -2,7 +2,7 @@ FROM debian:jessie
 
 RUN apt-get update && \
     apt-get install -y lighttpd python python-dev python-pip wget && \
-    pip install pycrypto ipython && \
+    pip install pycrypto ipython==5.4.1 && \
     mkdir /src && cd /src && \
     wget https://github.com/ctfs/write-ups-2015/raw/master/32c3-ctf-2015/reversing/flash-300/flash.tgz && \
     tar xzf flash.tgz && \
